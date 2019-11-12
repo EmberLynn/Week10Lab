@@ -48,4 +48,27 @@ public class AccountService {
         return user;
     }
     
+    public boolean forgotPassword(String email, String path) throws Exception
+    {
+        UserDB userDB = new UserDB();
+        User user = userDB.getUser(email);
+        
+        if (user == null) {
+            return false;
+        }
+        
+        String to = user.getEmail();
+        String subject = "Home Inventory - Password Retrieval";
+        String template = path + "/emailtemplates/password.html";
+        HashMap<String, String> tags = new HashMap<>();
+        tags.put("firstname", user.getFname());
+        tags.put("lastname", user.getLname());
+        tags.put("email", user.getEmail());
+        tags.put("password", user.getPassword());
+        
+        GmailService.sendMail(to, subject, template, tags);
+        
+        return true;
+    }
+    
 }

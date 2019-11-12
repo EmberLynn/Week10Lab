@@ -73,6 +73,8 @@ INSERT INTO `user_table` (`email`,`active`,`fname`,`lname`,`password`,`role`)
 	VALUES ('cprg352+anne@gmail.com', true, 'Anne','Annerson','password',2);
 INSERT INTO `user_table` (`email`,`active`,`fname`,`lname`,`password`,`role`)
 	VALUES ('cprg352+barb@gmail.com', true, 'Barb','Barber','password',2);
+INSERT INTO `user_table` (`email`,`active`,`fname`,`lname`,`password`,`role`)
+	VALUES ('ember.robb@gmail.com', true, 'Ember','Robb','password',2);
 
 INSERT INTO `item_table` (`Category`,`ItemName`,`Price`,`Owner`) VALUES (1,'blender',29.99,'cprg352+anne@gmail.com');
 INSERT INTO `item_table` (`Category`,`ItemName`,`Price`,`Owner`) VALUES (1,'toaster',19.99,'cprg352+anne@gmail.com');
